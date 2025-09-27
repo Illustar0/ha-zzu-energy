@@ -1,0 +1,13 @@
+{
+  "domain": "zzu_energy",
+  "name": "郑州大学宿舍电费监控",
+  "config_flow": true,
+  "documentation": "https://github.com/Illustar0/ha-zzu-energy",
+  "issue_tracker": "https://github.com/Illustar0/ha-zzu-energy/issues",
+  "requirements": ["zzupy>=6.0.0rc6"],
+  "codeowners": ["@Illustar0"],
+  "dependencies": [],
+  "version": "0.1.0",
+  "iot_class": "cloud_polling",
+  "integration_type": "service"
+}

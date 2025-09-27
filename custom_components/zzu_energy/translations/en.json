@@ -1,0 +1,99 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Setup ZZU Energy Monitor",
+        "description": "Enter your ZZU credentials",
+        "data": {
+          "username": "Account",
+          "password": "Password"
+        }
+      },
+      "reconfigure": {
+        "title": "Setup ZZU Energy Monitor",
+        "description": "Enter your ZZU credentials",
+        "data": {
+          "username": "Account",
+          "password": "Password"
+        }
+      },
+      "room_management": {
+        "title": "Manage Rooms",
+        "description": "Current rooms ({room_count}): {current_rooms}\n\nChoose an action:",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "add_room": {
+        "title": "Add Room",
+        "description": "Current rooms: {current_rooms}\n\nEnter room ID (format: areaid-buildingid--unitid-roomid):\nA separate device and remaining energy sensor will be created for this room.",
+        "data": {
+          "room_id": "Room ID"
+        }
+      },
+      "remove_room": {
+        "title": "Remove Room",
+        "description": "Current rooms: {current_rooms}\n\nSelect room to remove:",
+        "data": {
+          "room_id": "Room ID"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password",
+      "cannot_connect": "Failed to connect to ZZU servers",
+      "token_error": "Failed to retrieve authentication tokens",
+      "unknown": "Unexpected error occurred",
+      "room_already_exists": "Room already exists in the list",
+      "room_id_empty": "Room ID cannot be empty",
+      "invalid_room_format": "Invalid room ID format (should be: areaid-buildingid--unitid-roomid)",
+      "room_not_found": "Room not found in the list"
+    },
+    "abort": {
+      "already_configured": "Integration is already configured for this account"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ZZU Energy Options"
+      },
+      "room_management": {
+        "title": "Manage Rooms",
+        "description": "Current rooms ({room_count}): {current_rooms}\n\nChoose an action:",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "add_room": {
+        "title": "Add Room",
+        "description": "Current rooms: {current_rooms}\n\nEnter room ID (format: areaid-buildingid--unitid-roomid):\nA separate device and remaining energy sensor will be created for this room.",
+        "data": {
+          "room_id": "Room ID"
+        }
+      },
+      "remove_room": {
+        "title": "Remove Room",
+        "description": "Current rooms: {current_rooms}\n\nSelect room to remove:",
+        "data": {
+          "room_id": "Room ID"
+        }
+      }
+    },
+    "error": {
+      "room_already_exists": "Room already exists in the list",
+      "room_id_empty": "Room ID cannot be empty",
+      "invalid_room_format": "Invalid room ID format (should be: areaid-buildingid--unitid-roomid)",
+      "room_not_found": "Room not found in the list"
+    }
+  },
+  "selector": {
+    "action": {
+      "options": {
+        "add_room": "Add room",
+        "remove_room": "Remove room",
+        "finish": "Finish"
+      }
+    }
+  }
+}

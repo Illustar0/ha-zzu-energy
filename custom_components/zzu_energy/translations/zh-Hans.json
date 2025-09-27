@@ -1,0 +1,99 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "设置 郑州大学宿舍电费监控",
+        "description": "请输入您的郑州大学统一认证账号信息",
+        "data": {
+          "username": "账户",
+          "password": "密码"
+        }
+      },
+      "reconfigure": {
+        "title": "设置 郑州大学宿舍电费监控",
+        "description": "请输入您的郑州大学账统一认证号信息",
+        "data": {
+          "username": "账户",
+          "password": "密码"
+        }
+      },
+      "room_management": {
+        "title": "房间管理",
+        "description": "当前房间 ({room_count}个): {current_rooms}\n\n选择操作:",
+        "data": {
+          "action": "操作"
+        }
+      },
+      "add_room": {
+        "title": "添加房间",
+        "description": "当前房间: {current_rooms}\n\n请输入房间ID:",
+        "data": {
+          "room_id": "房间ID"
+        }
+      },
+      "remove_room": {
+        "title": "移除房间",
+        "description": "当前房间: {current_rooms}\n\n选择要移除的房间:",
+        "data": {
+          "room_id": "房间ID"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "用户名或密码错误",
+      "cannot_connect": "无法连接到郑州大学服务器",
+      "token_error": "获取认证令牌失败",
+      "unknown": "发生未知错误",
+      "room_already_exists": "房间已存在于列表中",
+      "room_id_empty": "房间ID不能为空",
+      "invalid_room_format": "房间ID格式无效 (应为: 区域ID-楼栋ID--单元ID-房间号)",
+      "room_not_found": "房间不在列表中"
+    },
+    "abort": {
+      "already_configured": "此账号的集成已经配置过了"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "郑州大学宿舍电费监控 - 选项"
+      },
+      "room_management": {
+        "title": "房间管理",
+        "description": "当前房间 ({room_count}个): {current_rooms}\n\n选择操作:",
+        "data": {
+          "action": "操作"
+        }
+      },
+      "add_room": {
+        "title": "添加房间",
+        "description": "当前房间: {current_rooms}\n\n请输入房间ID (格式: 区域ID-楼栋ID--单元ID-房间号):\n添加后将为该房间创建独立的设备和剩余电量传感器。",
+        "data": {
+          "room_id": "房间ID"
+        }
+      },
+      "remove_room": {
+        "title": "移除房间",
+        "description": "当前房间: {current_rooms}\n\n选择要移除的房间:",
+        "data": {
+          "room_id": "房间ID"
+        }
+      }
+    },
+    "error": {
+      "room_already_exists": "房间已存在于列表中",
+      "room_id_empty": "房间ID不能为空",
+      "invalid_room_format": "房间ID格式无效 (应为: 区域ID-楼栋ID--单元ID-房间号)",
+      "room_not_found": "房间不在列表中"
+    }
+  },
+  "selector": {
+    "action": {
+      "options": {
+        "add_room": "添加房间",
+        "remove_room": "移除房间",
+        "finish": "完成"
+      }
+    }
+  }
+}
