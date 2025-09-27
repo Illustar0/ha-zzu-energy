@@ -1,6 +1,6 @@
 [project]
 name = "ha-zzu-energy"
-version = "0.1.0"
+version = "0.1.1"
 description = "一个 Home Assistant 集成，用于监控郑州大学宿舍电量"
 requires-python = ">=3.13.2,<4"
 dependencies = [
