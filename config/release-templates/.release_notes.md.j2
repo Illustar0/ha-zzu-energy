@@ -49,7 +49,7 @@ _This release is published under the MIT License._
 %}{%  set releases = context.history.released.values() | list
 %}{%  set curr_release_index = releases.index(release)
 %}{#
-#}{%  if mask_initial_release and curr_release_index == releases | length - 1
+#}{%  if false
 %}{#    # On a first release, generate our special message
 #}{%    include ".components/first_release.md.j2"
 %}{%  else
