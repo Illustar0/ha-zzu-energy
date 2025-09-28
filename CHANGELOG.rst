@@ -2,6 +2,31 @@
 
 <!-- version list -->
 
+.. _changelog-v0.1.2:
+
+v0.1.2 (2025-09-28)
+===================
+
+🪲 Bug Fixes
+------------
+
+* Enhance error handling and logging in energy coordinator and sensors (`390c470`_)
+
+♻️ Refactoring
+---------------
+
+* Rename integration to ZZU Energy (`befd592`_)
+
+🎨 Code Style
+-------------
+
+* Format code with ruff (`0b29970`_)
+
+.. _0b29970: https://github.com/Illustar0/ha-zzu-energy/commit/0b29970c94bc1e566e29cdd22ce6837e756920f9
+.. _390c470: https://github.com/Illustar0/ha-zzu-energy/commit/390c470ebafd6e6eff587f51ce25bc873846cccd
+.. _befd592: https://github.com/Illustar0/ha-zzu-energy/commit/befd5926b6738a635804994f8ba6a724ed4b1321
+
+
 .. _changelog-v0.1.1:
 
 v0.1.1 (2025-09-27)
