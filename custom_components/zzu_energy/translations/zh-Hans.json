@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "设置 郑州大学宿舍电费监控",
+        "title": "设置 ZZU Energy",
         "description": "请输入您的郑州大学统一认证账号信息",
         "data": {
           "username": "账户",
@@ -10,7 +10,7 @@
         }
       },
       "reconfigure": {
-        "title": "设置 郑州大学宿舍电费监控",
+        "title": "设置 ZZU Energy",
         "description": "请输入您的郑州大学账统一认证号信息",
         "data": {
           "username": "账户",

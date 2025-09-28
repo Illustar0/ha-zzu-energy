@@ -34,7 +34,7 @@ ZZU Energy is a custom Home Assistant integration designed for Zhengzhou Univers
 5. Add repository URL: `https://github.com/Illustar0/ha-zzu-energy`
 6. Select category: "Integration"
 7. Click "Add"
-8. Search for "郑州大学宿舍电费监控" and install
+8. Search for "ZZU Energy" and install
 9. Restart Home Assistant
 
 ### Method 2: Manual Installation

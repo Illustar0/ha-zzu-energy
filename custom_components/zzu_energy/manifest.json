@@ -1,6 +1,6 @@
 {
   "domain": "zzu_energy",
-  "name": "郑州大学宿舍电费监控",
+  "name": "ZZU Energy",
   "codeowners": ["@Illustar0"],
   "config_flow": true,
   "dependencies": [],
