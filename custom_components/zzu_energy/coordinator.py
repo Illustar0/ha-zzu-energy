@@ -114,7 +114,9 @@ class ZZUEnergyDataUpdateCoordinator(DataUpdateCoordinator[dict[str, float]]):
         try:
             return await self._ecard_client.get_remaining_energy(room_id)
         except (LoginError, NetworkError, NotLoggedInError) as err:
-            _LOGGER.debug("Token expired for room %s, re-authenticating: %s", room_id, err)
+            _LOGGER.debug(
+                "Token expired for room %s, re-authenticating: %s", room_id, err
+            )
             await self._cas_client.login()
             await self._ecard_client.login()
             return await self._ecard_client.get_remaining_energy(room_id)
