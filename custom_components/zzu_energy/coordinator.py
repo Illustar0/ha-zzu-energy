@@ -95,6 +95,7 @@ class ZZUEnergyDataUpdateCoordinator(DataUpdateCoordinator[dict[str, float]]):
 
         for room_id, result in zip(room_ids, results, strict=True):
             if isinstance(result, Exception):
+                _LOGGER.warning("Failed to fetch data for room %s: %s", room_id, result)
                 if self.data and room_id in self.data:
                     energy_data[room_id] = self.data[room_id]
             else:
@@ -112,7 +113,8 @@ class ZZUEnergyDataUpdateCoordinator(DataUpdateCoordinator[dict[str, float]]):
 
         try:
             return await self._ecard_client.get_remaining_energy(room_id)
-        except (LoginError, NetworkError, NotLoggedInError):
+        except (LoginError, NetworkError, NotLoggedInError) as err:
+            _LOGGER.debug("Token expired for room %s, re-authenticating: %s", room_id, err)
             await self._cas_client.login()
             await self._ecard_client.login()
             return await self._ecard_client.get_remaining_energy(room_id)

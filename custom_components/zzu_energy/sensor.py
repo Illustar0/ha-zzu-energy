@@ -90,7 +90,7 @@ class ZZUEnergySensor(CoordinatorEntity[ZZUEnergyDataUpdateCoordinator], SensorE
     @property
     def native_value(self) -> float | None:
         """返回传感器状态."""
-        if self.coordinator.data is None:
+        if self.coordinator.data is None or self._room_id not in self.coordinator.data:
             return None
         return round(self.coordinator.data.get(self._room_id), 2)
 
@@ -109,11 +109,15 @@ class ZZUEnergySensor(CoordinatorEntity[ZZUEnergyDataUpdateCoordinator], SensorE
         )
 
     @property
-    def extra_state_attributes(self) -> dict[str, str]:
+    def extra_state_attributes(self) -> dict[str, str | None]:
         """返回额外状态属性."""
+        if self.coordinator.last_update_time:
+            last_update = f"{'Success' if self.coordinator.last_update_success else 'Failed'} | {self.coordinator.last_update_time.strftime('%Y-%m-%d %H:%M:%S')}"
+        else:
+            last_update = None
         return {
             "room_id": self._room_id,
-            "last_update": f"{'Success' if self.coordinator.last_update_success else 'Failed'} | {self.coordinator.last_update_time.strftime('%Y-%m-%d %H:%M:%S')}",
+            "last_update": last_update,
         }
 
 
@@ -229,8 +233,12 @@ class ZZUEnergyConsumptionSensor(
     @property
     def extra_state_attributes(self) -> dict[str, str | float | None]:
         """返回额外状态属性."""
+        if self.coordinator.last_update_time:
+            last_update = f"{'Success' if self.coordinator.last_update_success else 'Failed'} | {self.coordinator.last_update_time.strftime('%Y-%m-%d %H:%M:%S')}"
+        else:
+            last_update = None
         return {
             "room_id": self._room_id,
             "last_remaining_energy": self._last_remaining,
-            "last_update": f"{'Success' if self.coordinator.last_update_success else 'Failed'} | {self.coordinator.last_update_time.strftime('%Y-%m-%d %H:%M:%S')}",
+            "last_update": last_update,
         }
