@@ -1,6 +1,6 @@
 {
   "domain": "zzu_energy",
-  "name": "ZZU Energy",
+  "name": "Zhengzhou University Energy Monitor",
   "codeowners": ["@Illustar0"],
   "config_flow": true,
   "dependencies": [],
