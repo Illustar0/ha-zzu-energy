@@ -8,6 +8,6 @@
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/Illustar0/ha-zzu-energy/issues",
-  "requirements": ["zzupy>=6.0.0rc7"],
+  "requirements": ["zzupy>=6.0.0rc9"],
   "version": "0.1.2"
 }
