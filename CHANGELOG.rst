@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+.. _changelog-v0.1.3:
+
+v0.1.3 (2025-09-30)
+===================
+
+🪲 Bug Fixes
+------------
+
+* Update dependency to 6.0.0rc9 (`88e294b`_)
+
+🧹 Chores
+---------
+
+* Update integration name for clarity (`7b2cff0`_)
+
+.. _7b2cff0: https://github.com/Illustar0/ha-zzu-energy/commit/7b2cff00c343051ef16215693171f00a7bec8ca6
+.. _88e294b: https://github.com/Illustar0/ha-zzu-energy/commit/88e294b28ff1ab8882cc1560021a5dfe36136ed8
+
+
 .. _changelog-v0.1.2:
 
 v0.1.2 (2025-09-28)
